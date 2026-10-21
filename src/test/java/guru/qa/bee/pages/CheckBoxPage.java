@@ -17,14 +17,14 @@ public class CheckBoxPage {
 
     @Step("Выбираем чекбокс Home")
     public CheckBoxPage selectHomeCheckbox() {
-        // Кликаем по первому элементу с классом rc-tree-checkbox (это и есть квадратик Home)
+
         $(".rc-tree-checkbox").click();
         return this;
     }
 
     @Step("Проверяем, что в результате есть текст: {expectedText}")
     public CheckBoxPage shouldHaveResult(String expectedText) {
-        // Ждем появления блока с результатом и проверяем текст
+
         $("#result").shouldBe(visible).shouldHave(text(expectedText));
         return this;
     }

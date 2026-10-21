@@ -2,6 +2,7 @@ package guru.qa.bee.tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import guru.qa.bee.attach.Attachments;
 import guru.qa.bee.config.WebDriverConfig;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
@@ -34,6 +35,10 @@ public class TestBase {
 
     @AfterEach
     void tearDown() {
+        Attachments.screenshot();
+        Attachments.pageSource();
+        Attachments.browserConsoleLogs();
+
         closeWebDriver();
     }
 }

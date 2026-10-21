@@ -22,11 +22,11 @@ public class TextBoxTest extends TestBase {
     void fillAllFieldsTest() {
         textBoxPage
                 .openPage()
-                .typeUserName("Иван Иванов")
-                .typeUserEmail("ivan@example.com")
+                .typeUserName("Елена Прошина")
+                .typeUserEmail("elena@example.com")
                 .typeCurrentAddress("г. Москва, ул. Тверская, д. 1")
                 .typePermanentAddress("г. Санкт-Петербург, ул. Невский проспект, д. 10")
                 .submit()
-                .shouldHaveOutputName("Иван Иванов");
+                .shouldHaveOutputName("Елена Прошина");
     }
 }

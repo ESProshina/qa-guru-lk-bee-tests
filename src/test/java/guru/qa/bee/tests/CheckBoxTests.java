@@ -23,6 +23,6 @@ public class CheckBoxTests extends TestBase {
         checkBoxPage
                 .openPage()
                 .selectHomeCheckbox()
-                .shouldHaveResult("desktop"); // Проверяем, что вложенный desktop тоже выбрался
+                .shouldHaveResult("desktop");
     }
 }

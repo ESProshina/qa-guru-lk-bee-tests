@@ -22,7 +22,7 @@ public class FirstTest extends TestBase {
     void mainPageOpens() {
         mainPage
                 .openPage()
-                .shouldHaveTitle("ToolsQA")
+                .shouldHaveTitle("demosite")
                 .shouldBeLoaded();
     }
 }
