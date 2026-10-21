@@ -3,7 +3,7 @@
 [![Jenkins](https://img.shields.io/badge/Jenkins-CI%2FCD-blue)](https://jenkins.qa.guru/job/java-students/job/ESPro-lk-bee-tests/)
 [![Allure Report](https://img.shields.io/badge/Allure-Report-green)](https://jenkins.qa.guru/job/java-students/job/ESPro-lk-bee-tests/allure/)
 
-Дипломный проект по автоматизации UI-тестирования на Java (школа QA.GURU).
+Проект по автоматизации UI-тестирования на Java (школа QA.GURU).
 
 > **Бизнес-контекст:** Проект демонстрирует подходы к тестированию личного кабинета оператора связи (управление услугами, тарифами, детализацией). Ввиду политик безопасности (NDA) внутренний стенд компании недоступен, поэтому тесты написаны на открытый демо-стенд [demoqa.com](https://demoqa.com), а бизнес-сценарии стилизованы под телеком-компанию.
 
