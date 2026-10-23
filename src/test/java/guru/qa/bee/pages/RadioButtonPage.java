@@ -16,15 +16,15 @@ public class RadioButtonPage {
 
     @Step("Выбираем тариф 'BEE CONTACT LITE'")
     public RadioButtonPage selectBeeContactLite() {
-        // Кликаем по кнопке Impressive (так как это демо-сайт)
+        // Взаимодействие с UI-элементом, который на сайте называется Impressive
         $("label[for='impressiveRadio']").click();
         return this;
     }
 
-    @Step("Проверяем, что тариф 'BEE CONTACT LITE' успешно применен")
-    public RadioButtonPage shouldHaveTariffSelected() {
-        // Проверяем, что сайт отобразил успешный выбор (на сайте это слово Impressive)
-        $(".text-success").shouldHave(text("Impressive"));
+    // Теперь метод принимает ожидаемое значение, а не хардкодит его
+    @Step("Проверяем, что выбранный тариф отображается как: {expectedTariff}")
+    public RadioButtonPage shouldHaveSelectedTariff(String expectedTariff) {
+        $(".text-success").shouldHave(text(expectedTariff));
         return this;
     }
 }

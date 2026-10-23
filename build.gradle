@@ -15,6 +15,7 @@ java {
 repositories {
     mavenCentral()
 }
+
 def selenideVersion = '7.6.0'
 def allureVersion = '2.29.0'
 def junitVersion = '5.10.2'
@@ -40,7 +41,6 @@ dependencies {
     testImplementation "com.codeborne:selenide:${selenideVersion}"
     testImplementation "io.qameta.allure:allure-selenide:${allureVersion}"
     testImplementation "io.qameta.allure:allure-junit5:${allureVersion}"
-    testImplementation "io.qameta.allure:allure-java-commons:${allureVersion}"
     testImplementation "org.junit.jupiter:junit-jupiter:${junitVersion}"
     testImplementation "org.aeonbits.owner:owner:${ownerVersion}"
     testImplementation "org.aspectj:aspectjweaver:${aspectjVersion}"
@@ -50,17 +50,9 @@ dependencies {
 
 test {
     useJUnitPlatform()
-    systemProperties(System.getProperties())
 
-    if (System.getProperty("remote")) {
-        systemProperty "selenide.remote", System.getProperty("remote")
-    }
-    if (System.getProperty("baseUrl")) {
-        systemProperty "baseUrl", System.getProperty("baseUrl")
-    }
-    if (System.getProperty("browser")) {
-        systemProperty "browser", System.getProperty("browser")
-    }
+    // Эта строка автоматически пробрасывает все -D параметры (как и просил преподаватель)
+    systemProperties(System.getProperties())
 
     systemProperty "allure.results.directory", "build/allure-results"
 

@@ -23,6 +23,6 @@ public class RadioButtonTests extends TestBase {
         radioButtonPage
                 .openPage()
                 .selectBeeContactLite()
-                .shouldHaveTariffSelected();
+                .shouldHaveSelectedTariff("Impressive"); // Передаем ожидаемый текст из теста
     }
 }
