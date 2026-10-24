@@ -51,7 +51,6 @@ dependencies {
 test {
     useJUnitPlatform()
 
-    // Эта строка автоматически пробрасывает все -D параметры (как и просил преподаватель)
     systemProperties(System.getProperties())
 
     systemProperty "allure.results.directory", "build/allure-results"

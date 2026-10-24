@@ -21,7 +21,7 @@ public class RadioButtonPage {
         return this;
     }
 
-    // Теперь метод принимает ожидаемое значение, а не хардкодит его
+
     @Step("Проверяем, что выбранный тариф отображается как: {expectedTariff}")
     public RadioButtonPage shouldHaveSelectedTariff(String expectedTariff) {
         $(".text-success").shouldHave(text(expectedTariff));
